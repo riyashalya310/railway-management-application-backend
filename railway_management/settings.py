@@ -29,7 +29,10 @@ SECRET_KEY = 'django-insecure-u)e-65xwosdck2v33b+p(#w93b)po7vx=_t1uzx*c60#gpj^p%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+PORT = os.getenv('PORT', '8000')
+
+ALLOWED_HOSTS = ['railway-management-application-backend.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -88,7 +91,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'postgres',
         'USER': 'username',
-        'PASSWORD': '@Riyashalya310',
         'HOST': 'localhost',
         'PORT': '5432',
     }
